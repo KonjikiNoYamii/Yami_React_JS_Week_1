@@ -41,7 +41,7 @@ Berikut alur lengkap bagaimana aplikasi bekerja dari awal hingga akhir:
 
 2. **Menandai Tugas Selesai**
    - Setiap tugas memiliki checkbox di sisi kiri.
-   - Ketika dicentang, teks tugas akan berubah gaya menjadi *coret* menandakan bahwa tugas tersebut telah selesai.
+   - Ketika dicentang, teks tugas cuma akan bisa dilihat di list All dan Completed.
 
 3. **Menghapus Tugas**
    - Tugas yang tidak diperlukan dapat dihapus dengan menekan tombol “X”.
