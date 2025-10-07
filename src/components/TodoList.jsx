@@ -66,7 +66,7 @@ export default function TodoList() {
               <p style={{ textAlign: "center", color: "blue" }}>
                 Tidak ada tugas....
               </p>
-              <img src="./public/chitoge-removebg-preview.png" alt="" />
+              <img src="./chitoge-removebg-preview.png" alt="" />
             </div>
           ) : (
             <ul>
