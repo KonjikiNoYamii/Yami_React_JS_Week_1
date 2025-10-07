@@ -1,0 +1,300 @@
+.main {
+    margin-top: 2%;
+  display: flex;
+  gap: 20px; 
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  width: 70%;
+  justify-self: center;
+  border: 2px rgb(167, 159, 159) solid;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.filterSection {
+  flex: 0 0 150px; 
+  
+
+}
+
+.filterList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filterList li {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  transition: background-color 0.2s;
+  background-color: #019ef9;
+}
+
+.filterList li:hover {
+  background-color: #1f90d2;
+}
+hr{
+    opacity: 0.9;
+}
+.todoSection {
+  flex: 1; 
+}
+
+form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border: 2px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  font-size: 20px;
+}
+
+button[type="submit"] {
+  padding: 8px 15px;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  background-color:#019ef9;
+  transition: background-color 0.2s;
+  color: white;
+  font-size:20px;
+}
+
+button[type="submit"]:hover {
+  background-color: #1f90d2;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 8px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+ .todoSection li {
+    justify-content: space-between;
+ }
+ .todoSection img{
+    height: 80%;
+    width: 80%;
+ }
+.todoSection li button {
+  background: none;
+  border: none;
+  color: #019ef9;
+  width: 25px;
+  height: 25px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.todoSection li button:hover {
+  transform: scale(1.3);
+  color: #ff3b3b;
+}
+
+.todoItem {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* 🌸 Checkbox cantik buatan Silica desuwah~ */
+.checkbox {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #019ef9;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+  background-color: #fff;
+}
+
+/* Saat hover */
+.checkbox:hover {
+  box-shadow: 0 0 5px #019ef9aa;
+  transform: scale(1.1);
+}
+
+/* Saat dicentang */
+.checkbox:checked {
+  background-color: #019ef9;
+  border-color: #019ef9;
+}
+
+/* Ikon centang animasi lembut */
+.checkbox:checked::after {
+  content: "✔";
+  position: absolute;
+  top: 0;
+  left: 4px;
+  font-size: 16px;
+  color: white;
+  animation: checkmark 0.2s ease forwards;
+}
+
+@keyframes checkmark {
+  from {
+    opacity: 0;
+    transform: scale(0.5) rotate(-20deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+.clockSection {
+  flex: 0 0 220px;
+  text-align: center;
+  background-color: #f2f9ff;
+  border: 2px solid #019ef9;
+  border-radius: 10px;
+  padding: 15px;
+  height: 400px;
+  color: #019ef9;
+  font-family: "Poppins", sans-serif;
+}
+
+.clockSection h2 {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.clockSection p {
+  font-size: 16px;
+  font-weight: bold;
+}
+/* 🌸 Responsif untuk HP (lebar layar ≤ 768px) */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column; /* dari samping jadi ke bawah */
+    width: 90%;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .filterSection {
+    flex: none;
+    width: 100%;
+    order: 1;
+  }
+
+  .filterList li {
+    font-size: 16px;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+
+  .todoSection {
+    flex: none;
+    width: 100%;
+    order: 2;
+  }
+
+  form {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  input[type="text"] {
+    font-size: 16px;
+    border-radius: 5px;
+  }
+
+  button[type="submit"] {
+    font-size: 16px;
+    border-radius: 5px;
+  }
+
+  ul li {
+    font-size: 15px;
+    gap: 5px;
+  }
+
+  .todoSection li button {
+    width: 22px;
+    height: 22px;
+    font-size: 16px;
+  }
+
+  .checkbox {
+    width: 20px;
+    height: 20px;
+  }
+
+  .clockSection {
+    flex: none;
+    width: 96%;
+    height: auto;
+    order: 3;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  .clockSection h2 {
+    font-size: 16px;
+  }
+
+  .clockSection p {
+    font-size: 14px;
+  }
+}
+
+/* 🌼 Untuk layar sangat kecil (≤ 480px) */
+@media (max-width: 480px) {
+  .main {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .filterList li {
+    font-size: 14px;
+  }
+
+  .todoSection img {
+    width: 100%;
+    height: auto;
+  }
+
+  input[type="text"],
+  button[type="submit"] {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .clockSection {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .clockSection p {
+    font-size: 13px;
+  }
+}
