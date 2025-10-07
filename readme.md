@@ -14,7 +14,7 @@ Aplikasi ini juga dibuat **responsif** sehingga tampil cantik di berbagai ukuran
 - ✅ **Tandai Selesai**  
   Klik pada checkbox untuk menandai tugas telah selesai.
 
-- ❌ **Hapus Tugas dengan Animasi**  
+- ❌ **Hapus Tugas dengan Animasi**   
   Tugas yang dihapus akan menghilang secara halus menggunakan efek transisi.
 
 - 🔍 **Filter Daftar Tugas**
